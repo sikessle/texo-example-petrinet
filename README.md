@@ -18,6 +18,7 @@ Dazu waren folgende Schritte notwendig:
     - Die Mapping-File Attribute sind nicht notwendig, da der Code mit den JPA Annotationen versehen ist.   
     - Die generierten Klassen müssen in der persistence-unit deklariert werden: \<class\>…\</class\>
     - Die ddl-generation sollte auf "create-tables“ gestellt werden. Dadurch werden die Tabellen nur einmal erstellt und danach wird persistiert.
+    - Zum Testen: Den Pfad der derby2 DB anpassen von /tmp/sprayDB auf beliebigen Pfad, sofern kein Unix benutzt wird.
 - Welche persistence-unit benutzt wird, kann in der Klasse „TexoWebExampleContextListener“ definiert werden. Diese Klasse ist als listener in der web.xml konfiguriert. Hier müssen wir uns einklinken und die persistence unit entsprechend auswählen.
 - Den entsprechenden JDBC Driver (z.b. mysql) in den WebContent/WEB-INF/lib Ordner legen.
 - In „TexoWebExampleContextListener“ muss mittels ServiceModelPackageRegistry.getInstance().register(PetriNetModelPackage.INSTANCE) die Instanz gesetzt werden, sonst findet er die ECore Typen nicht. Das Fett-gedruckte muss entsprechend ersetzt werden, je nach dem wie das Ecore heißt.
