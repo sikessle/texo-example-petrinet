@@ -21,5 +21,5 @@ Dazu waren folgende Schritte notwendig:
     - Zum Testen: Den Pfad der derby2 DB anpassen von /tmp/sprayDB auf beliebigen Pfad, sofern kein Unix benutzt wird.
 - Welche persistence-unit benutzt wird, kann in der Klasse „TexoWebExampleContextListener“ definiert werden. Diese Klasse ist als listener in der web.xml konfiguriert. Hier müssen wir uns einklinken und die persistence unit entsprechend auswählen.
 - Den entsprechenden JDBC Driver (z.b. mysql) in den WebContent/WEB-INF/lib Ordner legen.
-- In „TexoWebExampleContextListener“ muss mittels ServiceModelPackageRegistry.getInstance().register(**PetriNet**ModelPackage.INSTANCE) die Instanz gesetzt werden, sonst findet er die ECore Typen nicht. Das Fett-gedruckte muss entsprechend ersetzt werden, je nach dem wie das Ecore heißt.
+- In „TexoWebExampleContextListener“ muss mittels ServiceModelPackageRegistry.getInstance().register(<b>PetriNet</b>ModelPackage.INSTANCE) die Instanz gesetzt werden, sonst findet er die ECore Typen nicht. Das Fett-gedruckte muss entsprechend ersetzt werden, je nach dem wie das Ecore heißt.
 - JSON-REST Schnittstelle: <https://wiki.eclipse.org/Texo/JSON_REST_Web_Services>
