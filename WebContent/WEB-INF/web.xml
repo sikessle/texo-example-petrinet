@@ -39,4 +39,12 @@
     <servlet-name>TexoXMLWS</servlet-name>
     <url-pattern>/xmlws/*</url-pattern>
   </servlet-mapping>
+  <servlet>
+  	<servlet-name>RestEcoreList</servlet-name>
+  	<servlet-class>org.eclipse.emf.texo.web.example.RestEcoreList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>RestEcoreList</servlet-name>
+  	<url-pattern>/ecorelist/*</url-pattern>
+  </servlet-mapping>
 </web-app>
