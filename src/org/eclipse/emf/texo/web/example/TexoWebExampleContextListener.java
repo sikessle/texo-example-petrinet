@@ -41,7 +41,7 @@ public class TexoWebExampleContextListener implements ServletContextListener {
 	public void contextInitialized(ServletContextEvent arg0) {
 		ServiceModelPackageRegistry.getInstance().register(
 				PetriNetModelPackage.INSTANCE);
-		EntityManagerProvider.getInstance().setPersistenceUnitName("derby2"); //$NON-NLS-1$
+		EntityManagerProvider.getInstance().setPersistenceUnitName("mysql"); //$NON-NLS-1$
 		// initialize aggressively
 		EntityManagerProvider.getInstance().initialize();
 	}
